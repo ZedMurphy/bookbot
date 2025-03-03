@@ -16,3 +16,18 @@ def count_characters(text):
         else:
             counted_characters[char] = 1
     return counted_characters
+
+# sorting counted characters
+
+def sort_on(dict):
+    return dict["num"]
+
+def get_sorted_list(dict):
+    listed_dict = []
+    for char in dict:
+        mini_dict = {}
+        mini_dict["character"] = char
+        mini_dict["num"] = dict[char]
+        listed_dict.append(mini_dict)
+    listed_dict.sort(reverse = True, key = sort_on)
+    return listed_dict
